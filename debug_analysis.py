@@ -14,7 +14,7 @@ def get_token():
     if not FINMIND_PASSWORD:
         print("ERROR: FINMIND_PASSWORD not set")
         return ""
-    r = requests.post(LOGIN_URL, json={
+    r = requests.post(LOGIN_URL, data={
         "user_id": FINMIND_USER,
         "password": FINMIND_PASSWORD
     }, timeout=30)
