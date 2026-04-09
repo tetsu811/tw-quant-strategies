@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run debug analysis
+      - name: Run daily stock picks
         env:
           FINMIND_USER: ${{ secrets.FINMIND_USER }}
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           FINMIND_PASSWORD: ${{ secrets.FINMIND_PASSWORD }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_IDS: ${{ secrets.LINE_USER_IDS }}
-        run: python debug_analysis.py
+        run: python run_daily.py
