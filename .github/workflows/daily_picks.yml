@@ -10,7 +10,6 @@ jobs:
   run-strategies:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -25,6 +24,7 @@ jobs:
 
       - name: Run debug analysis
         env:
+          FINMIND_USER: ${{ secrets.FINMIND_USER }}
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           FINMIND_PASSWORD: ${{ secrets.FINMIND_PASSWORD }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
