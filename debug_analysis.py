@@ -1,13 +1,35 @@
 """
 Debug analysis: relaxed conditions to find near-miss stocks
+Uses FinMind login API to get dynamic token (avoids IP binding)
 """
 import os, datetime, requests, pandas as pd, numpy as np
 
-FINMIND_TOKEN = os.environ.get("FINMIND_TOKEN", "")
+FINMIND_USER = os.environ.get("FINMIND_USER", "tetsu")
+FINMIND_PASSWORD = os.environ.get("FINMIND_PASSWORD", "")
 API_URL = "https://api.finmindtrade.com/api/v4/data"
+LOGIN_URL = "https://api.finmindtrade.com/api/v4/login"
+
+def get_token():
+    """Login to FinMind and get a dynamic token"""
+    if not FINMIND_PASSWORD:
+        print("ERROR: FINMIND_PASSWORD not set")
+        return ""
+    r = requests.post(LOGIN_URL, json={
+        "user_id": FINMIND_USER,
+        "password": FINMIND_PASSWORD
+    }, timeout=30)
+    data = r.json()
+    if data.get("status") != 200:
+        print(f"Login failed: {data}")
+        return ""
+    token = data.get("token", "")
+    print(f"Login OK, token length={len(token)}")
+    return token
+
+TOKEN = get_token()
 
 def _get(dataset, **kw):
-    params = {"dataset": dataset, "token": FINMIND_TOKEN}
+    params = {"dataset": dataset, "token": TOKEN}
     params.update({k: v for k, v in kw.items() if v})
     r = requests.get(API_URL, params=params, timeout=60)
     data = r.json()
@@ -129,7 +151,6 @@ if not revenue_df.empty:
                 print(relaxed3.sort_values("rs60", ascending=False).head(20).to_string(index=False))
 
 print("\n")
-
 # ========== Strategy 2: Institutional Chip (Relaxed) ==========
 print("=" * 60)
 print("Strategy 2: Institutional Chip (Relaxed Analysis)")
