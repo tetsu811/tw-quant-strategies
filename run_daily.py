@@ -312,7 +312,7 @@ def generate_html(s1, s2, sell):
     html = f"""<!DOCTYPE html>
 <html lang="zh-TW">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>\u53f0\u80a1\u91cf\u5316\u7b56\u7565 {today_s}</title>
+<title>\u53f0\u80a1\u7b56\u7565\u89c0\u5bdf {today_s}</title>
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:#0a0a0f;color:#d0d0d0;padding:20px;max-width:1200px;margin:0 auto}}
@@ -343,7 +343,7 @@ tr:hover td{{background:rgba(255,255,255,0.02)}}
 @media(max-width:768px){{body{{padding:10px}}table{{font-size:11px}}th,td{{padding:5px 3px}}}}
 </style></head>
 <body>
-<h1>\u53f0\u80a1\u91cf\u5316\u7b56\u7565 - \u6bcf\u65e5\u9078\u80a1\u8a0a\u865f</h1>
+<h1>\u53f0\u80a1\u7b56\u7565\u89c0\u5bdf - \u6bcf\u65e5\u5e02\u5834\u89c0\u5bdf</h1>
 <p class="sub">\u66f4\u65b0\uff1a{now_s} (UTC+8) | FinMind API</p>
 <div class="sec s1"><h2>&#x1F4C8; \u7b56\u7565\u4e00\uff1a\u71df\u6536\u52d5\u80fd</h2>
 <p class="desc">\u8fd1\u4e09\u6708\u71df\u6536 YoY \u6b63\u6210\u9577 + \u52a0\u901f + \u898f\u6a21&ge;3\u5104 + \u5747\u7dda\u591a\u982d | \u6eff\u520620</p>
@@ -364,7 +364,7 @@ tr:hover td{{background:rgba(255,255,255,0.02)}}
 
 def format_line_message(s1, s2, sell):
     today_s = datetime.date.today().strftime("%Y-%m-%d")
-    lines = [f"\U0001F4C8 \u53f0\u80a1\u91cf\u5316\u9078\u80a1 {today_s}\n"]
+    lines = [f"\U0001F4C8 \u53f0\u80a1\u7b56\u7565\u89c0\u5bdf {today_s}\n"]
     lines.append("=== \u7b56\u7565\u4e00\uff1a\u71df\u6536\u52d5\u80fd ===")
     for c in s1:
         lines.append(f"[{c['tier']}] {c['stock_id']} {c.get('name','?')} s={c['total_score']} YoY={'/'.join(f'{y:.0f}%' for y in c.get('yoys',[]))}")
