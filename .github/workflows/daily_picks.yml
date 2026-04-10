@@ -28,7 +28,6 @@ jobs:
         env:
           FINMIND_USER: ${{ secrets.FINMIND_USER }}
           FINMIND_PASSWORD: ${{ secrets.FINMIND_PASSWORD }}
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_IDS: ${{ secrets.LINE_USER_IDS }}
           TZ: Asia/Taipei
