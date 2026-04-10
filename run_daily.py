@@ -713,8 +713,36 @@ def detect_sell_signals(name_map):
 
     signals.sort(key=lambda x: x["total_net"])
     signals = [s for s in signals if s["total_net"] < -100000]
-    print(f"  [sell] {len(signals)} signals")
-    return signals[:20]
+
+    # --- MA filter: keep only stocks that broke below MA20 or MA60 ---
+    price_start = (today - datetime.timedelta(days=120)).strftime("%Y-%m-%d")
+    filtered = []
+    for s in signals[:40]:  # check top 40 candidates (some may be filtered out)
+        sid = s["stock_id"]
+        try:
+            prices = fetch_api("TaiwanStockPrice", price_start, data_id=sid)
+            closes = [float(p["close"]) for p in sorted(prices, key=lambda x: x["date"]) if float(p.get("close", 0)) > 0]
+            if len(closes) < 5:
+                continue
+            cur = closes[-1]
+            ma20 = sum(closes[-20:]) / min(len(closes), 20) if len(closes) >= 5 else cur
+            ma60 = sum(closes[-60:]) / min(len(closes), 60) if len(closes) >= 5 else cur
+            below_ma20 = cur < ma20
+            below_ma60 = cur < ma60
+            s["price"] = cur
+            s["ma20"] = round(ma20, 2)
+            s["ma60"] = round(ma60, 2)
+            s["below_ma20"] = below_ma20
+            s["below_ma60"] = below_ma60
+            if below_ma20 or below_ma60:
+                filtered.append(s)
+            time.sleep(0.15)
+        except Exception as e:
+            print(f"  [sell] MA check failed for {sid}: {e}")
+            continue
+
+    print(f"  [sell] {len(signals)} raw -> {len(filtered)} after MA filter")
+    return filtered[:20]
 
 
 # ===========================================================================
@@ -798,12 +826,20 @@ def generate_html(s1, s2, s3, sell):
     for s in sell:
         nets = s.get("daily_nets", {})
         ds = " / ".join(fn(nets[d]) for d in sorted(nets.keys()))
+        price_s = f'{s["price"]:.2f}' if s.get("price") else "-"
+        ma20_s = f'{s["ma20"]:.2f}' if s.get("ma20") else "-"
+        ma60_s = f'{s["ma60"]:.2f}' if s.get("ma60") else "-"
+        bm20 = '<span class="ma-no">&#9660;</span>' if s.get("below_ma20") else '<span class="ma-yes">&#9650;</span>'
+        bm60 = '<span class="ma-no">&#9660;</span>' if s.get("below_ma60") else '<span class="ma-yes">&#9650;</span>'
         sellr += (f'<tr><td><b>{s["stock_id"]}</b></td>'
                   f'<td>{s.get("name","?")}</td>'
                   f'<td class="sr">{s["consecutive_days"]} \u5929</td>'
                   f'<td class="sr">{fn(s["total_net"])}</td>'
+                  f'<td class="num">{price_s}</td>'
+                  f'<td class="ctr">{bm20} {ma20_s}</td>'
+                  f'<td class="ctr">{bm60} {ma60_s}</td>'
                   f'<td class="dd">{ds}</td></tr>\n')
-    nosell = '<tr><td colspan="5" class="empty">\u4eca\u65e5\u7121\u8ce3\u51fa\u8b66\u793a</td></tr>'
+    nosell = '<tr><td colspan="8" class="empty">\u4eca\u65e5\u7121\u8ce3\u51fa\u8b66\u793a</td></tr>'
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -858,12 +894,12 @@ tr:hover td{{background:rgba(255,255,255,0.02)}}
 <tbody>{s3r}</tbody></table></div>
 
 <div class="sec sell"><h2>&#x26A0;&#xFE0F; \u8ce3\u51fa\u8b66\u793a</h2>
-<p class="desc">\u6295\u4fe1\u9023\u7e8c {SELL_SIGNAL_CONSECUTIVE_DAYS} \u5929\u6de8\u8ce3\u8d85 \u4e14 \u5408\u8a08>10\u842c\u5f35</p>
-<table><thead><tr><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u9023\u8ce3</th><th>\u5408\u8a08</th><th>\u660e\u7d30</th></tr></thead>
+<p class="desc">\u6295\u4fe1\u9023\u7e8c {SELL_SIGNAL_CONSECUTIVE_DAYS} \u5929\u6de8\u8ce3\u8d85 \u4e14 \u5408\u8a08>10\u842c\u5f35 \u4e14 \u8dcc\u7834MA20\u6216MA60</p>
+<table><thead><tr><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u9023\u8ce3</th><th>\u5408\u8a08</th><th>\u80a1\u50f9</th><th>MA20</th><th>MA60</th><th>\u660e\u7d30</th></tr></thead>
 <tbody>{sellr if sellr else nosell}</tbody></table></div>
 
 <div class="legend">
-<span>&#10003; \u7ad9\u4e0a\u5747\u7dda</span><span>&#10007; \u8dcc\u7834</span>
+<span>&#10003; \u7ad9\u4e0a\u5747\u7dda</span><span>&#10007; \u8dcc\u7834</span><span>&#9660; \u8dcc\u7834\u5747\u7dda</span><span>&#9650; \u7ad9\u4e0a\u5747\u7dda</span>
 <span>\u6295\u91cf\u6bd4=\u6295\u4fe1\u8cb7\u8d85/\u6210\u4ea4\u91cf</span>
 <span>\u96c6\u4e2d\u5ea6=20\u65e5\u7d2f\u8a08\u6295\u4fe1/\u6210\u4ea4\u91cf</span>
 <span>\u5927\u6236%=\u96c6\u4fdd&ge;400\u5f35\u6301\u80a1\u6bd4</span>
