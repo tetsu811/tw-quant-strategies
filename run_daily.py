@@ -162,7 +162,7 @@ def run_strategy_1(name_map):
                     c["above_ma60"] = closes[-1] > sum(closes[-60:]) / 60
                 else:
                     c["above_ma60"] = closes[-1] > sum(closes) / len(closes)
-                    b = (2 if c.get("above_ma20") else 0) + (2 if c.get("above_ma60") else 0)
+                b = (2 if c.get("above_ma20") else 0) + (2 if c.get("above_ma60") else 0)
                 if c["price_chg"] > 10: b += 1
                 if c["price_chg"] > 20: b += 1
                 c["ma_bonus"] = b
