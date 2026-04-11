@@ -175,7 +175,6 @@ def run_strategy_1(name_map):
     result = []
     for c in top[:5]:
         result.append(c)
-        result.append(c)
     print(f"  [S1] {len(result)} picks")
     return result
 
