@@ -21,44 +21,6 @@
       "name": "智邦"
     },
     {
-      "stock_id": "2345",
-      "yoys": [
-        67.6,
-        71.9,
-        82.7
-      ],
-      "pos_count": 3,
-      "latest_rev": 26052581000.0,
-      "accel": 10.799999999999997,
-      "rev_score": 13,
-      "price": 1835.0,
-      "price_chg": 58.9,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 6,
-      "total_score": 19,
-      "name": "智邦"
-    },
-    {
-      "stock_id": "5274",
-      "yoys": [
-        18.4,
-        28.5,
-        65.9
-      ],
-      "pos_count": 3,
-      "latest_rev": 1010964000.0,
-      "accel": 37.400000000000006,
-      "rev_score": 13,
-      "price": 12580.0,
-      "price_chg": 87.1,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 6,
-      "total_score": 19,
-      "name": "信驊"
-    },
-    {
       "stock_id": "5274",
       "yoys": [
         18.4,
@@ -97,25 +59,6 @@
       "name": "緯創"
     },
     {
-      "stock_id": "3231",
-      "yoys": [
-        141.6,
-        151.5,
-        177.4
-      ],
-      "pos_count": 3,
-      "latest_rev": 284893080000.0,
-      "accel": 25.900000000000006,
-      "rev_score": 14,
-      "price": 135.0,
-      "price_chg": -5.9,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 4,
-      "total_score": 18,
-      "name": "緯創"
-    },
-    {
       "stock_id": "1815",
       "yoys": [
         6.0,
@@ -133,44 +76,6 @@
       "ma_bonus": 6,
       "total_score": 18,
       "name": "富喬"
-    },
-    {
-      "stock_id": "1815",
-      "yoys": [
-        6.0,
-        19.2,
-        60.8
-      ],
-      "pos_count": 3,
-      "latest_rev": 629431000.0,
-      "accel": 41.599999999999994,
-      "rev_score": 12,
-      "price": 110.0,
-      "price_chg": 30.3,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 6,
-      "total_score": 18,
-      "name": "富喬"
-    },
-    {
-      "stock_id": "2360",
-      "yoys": [
-        59.3,
-        72.1,
-        86.0
-      ],
-      "pos_count": 3,
-      "latest_rev": 3826300000.0,
-      "accel": 13.900000000000006,
-      "rev_score": 12,
-      "price": 1785.0,
-      "price_chg": 121.7,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 6,
-      "total_score": 18,
-      "name": "致茂"
     },
     {
       "stock_id": "2360",
