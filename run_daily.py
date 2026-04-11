@@ -421,8 +421,7 @@ def run_strategy_2(name_map):
 
     candidates.sort(key=lambda x: x["total_score"], reverse=True)
     result = []
-    for i, c in enumerate(candidates[:15]):
-        c["tier"] = "Top" if i < 5 else ("Second" if i < 10 else "Third")
+    for i, c in enumerate(candidates[:5]):
         result.append(c)
     print(f"  [S2] {len(result)} picks (from {len(candidates)} qualified)")
     return result
@@ -653,8 +652,7 @@ def run_strategy_3(name_map):
 
     candidates.sort(key=lambda x: x["total_score"], reverse=True)
     result = []
-    for i, c in enumerate(candidates[:15]):
-        c["tier"] = "Top" if i < 5 else ("Second" if i < 10 else "Third")
+    for i, c in enumerate(candidates[:5]):
         result.append(c)
     print(f"  [S3] {len(result)} picks")
     return result
@@ -791,8 +789,7 @@ def generate_html(s1, s2, s3, sell):
     # S2 rows
     s2r = ""
     for c in s2:
-        s2r += (f'<tr><td>{tb(c.get("tier",""))}</td>'
-                f'<td><b>{c["stock_id"]}</b></td>'
+        s2r += (f'<tr><td><b>{c["stock_id"]}</b></td>'
                 f'<td>{c.get("name","?")}</td>'
                 f'<td class="num">{c.get("total_score",0)}</td>'
                 f'<td class="num">{c.get("tvr",0):.1f}%</td>'
@@ -802,14 +799,12 @@ def generate_html(s1, s2, s3, sell):
                 f'<td class="num">{fn(c.get("foreign_5d",0))}</td>'
                 f'<td class="num">{c.get("price") or "-"}</td>'
                 f'<td class="ctr">{mi(c.get("above_ma20"))}</td>'
-                f'<td class="num">{c.get("vol_ratio",0):.1f}x</td>'
-                f'<td>{c.get("score_detail","")}</td></tr>\n')
+                f'<td class="num">{c.get("vol_ratio",0):.1f}x</td></tr>\n')
 
     # S3 rows
     s3r = ""
     for c in s3:
-        s3r += (f'<tr><td>{tb(c.get("tier",""))}</td>'
-                f'<td><b>{c["stock_id"]}</b></td>'
+        s3r += (f'<tr><td><b>{c["stock_id"]}</b></td>'
                 f'<td>{c.get("name","?")}</td>'
                 f'<td class="num">{c.get("total_score",0)}</td>'
                 f'<td class="num">{c.get("big_holder_pct",0):.1f}%</td>'
@@ -818,8 +813,7 @@ def generate_html(s1, s2, s3, sell):
                 f'<td class="num">{fn(c.get("short_chg",0))}</td>'
                 f'<td class="num">{c.get("inst_ratio",0):.1f}%</td>'
                 f'<td class="num">{c.get("price") or "-"}</td>'
-                f'<td class="ctr">{mi(c.get("above_ma20"))}</td>'
-                f'<td>{c.get("score_detail","")}</td></tr>\n')
+                f'<td class="ctr">{mi(c.get("above_ma20"))}</td></tr>\n')
 
     # Sell rows
     sellr = ""
@@ -848,9 +842,9 @@ def generate_html(s1, s2, s3, sell):
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:#0a0a0f;color:#d0d0d0;padding:20px;max-width:1200px;margin:0 auto}}
-h1{{text-align:center;font-size:22px;color:#fff;margin-bottom:4px}}
+h1{{text-align:center;font-size:22px;color:#fff;margin-bottom:4px;padding-top:10px}}
 .sub{{text-align:center;color:#666;font-size:13px;margin-bottom:24px}}
-.sec{{border-radius:12px;padding:20px;margin-bottom:20px}}
+.sec{{border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto}}
 .s1,.s2,.s3{{background:#111828;border:1px solid #1e2d4a}}
 .sell{{background:#1f1114;border:1px solid #3d1a22}}
 h2{{font-size:17px;margin-bottom:4px;color:#fff}}
@@ -880,17 +874,17 @@ tr:hover td{{background:rgba(255,255,255,0.02)}}
 
 <div class="sec s1"><h2>&#x1F4C8; \u7b56\u7565\u4e00\uff1a\u71df\u6536\u52d5\u80fd</h2>
 <p class="desc">\u8fd1\u4e09\u6708\u71df\u6536 YoY \u6b63\u6210\u9577 + \u52a0\u901f + \u898f\u6a21&ge;3\u5104 + \u5747\u7dda\u591a\u982d | \u6eff\u520620</p>
-<table><thead><tr><th>\u5c64\u7d1a</th><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>YoY</th><th>\u52a0\u901f\u5ea6</th><th>\u71df\u6536</th><th>\u80a1\u50f9</th><th>\u6f32\u5e45</th><th>MA20</th><th>MA60</th></tr></thead>
+<table><thead><tr><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>YoY</th><th>\u52a0\u901f\u5ea6</th><th>\u71df\u6536</th><th>\u80a1\u50f9</th><th>\u6f32\u5e45</th><th>MA20</th><th>MA60</th></tr></thead>
 <tbody>{s1r}</tbody></table></div>
 
 <div class="sec s2"><h2>&#x1F4B0; \u7b56\u7565\u4e8c\uff1a\u7c4c\u78bc\u52d5\u80fd</h2>
 <p class="desc">\u6295\u91cf\u6bd4 + \u9023\u7e8c\u8cb7\u8d85 + \u7c4c\u78bc\u96c6\u4e2d\u5ea6 + \u6cd5\u4eba\u540c\u5411 + \u6280\u8853\u9762 | \u6eff\u520618</p>
-<table><thead><tr><th>\u5c64\u7d1a</th><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>\u6295\u91cf\u6bd4</th><th>\u8cb7\u8d85\u5929</th><th>\u9023\u7e8c</th><th>\u96c6\u4e2d\u5ea6</th><th>\u5916\u8cc75D</th><th>\u80a1\u50f9</th><th>MA20</th><th>\u91cf\u6bd4</th><th>\u8a55\u5206</th></tr></thead>
+<table><thead><tr><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>\u6295\u91cf\u6bd4</th><th>\u8cb7\u8d85\u5929</th><th>\u9023\u7e8c</th><th>\u96c6\u4e2d\u5ea6</th><th>\u5916\u8cc75D</th><th>\u80a1\u50f9</th><th>MA20</th><th>\u91cf\u6bd4</th></tr></thead>
 <tbody>{s2r}</tbody></table></div>
 
 <div class="sec s3"><h2>&#x1F50D; \u7b56\u7565\u4e09\uff1a\u7c4c\u78bc\u96c6\u4e2d</h2>
 <p class="desc">\u96c6\u4fdd\u5927\u6236\u589e + \u878d\u8cc7\u6e1b + \u6cd5\u4eba\u96c6\u4e2d\u8cb7 + \u91cf\u50f9\u914d\u5408 | \u6eff\u520616</p>
-<table><thead><tr><th>\u5c64\u7d1a</th><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>\u5927\u6236%</th><th>\u5927\u6236\u8b8a\u5316</th><th>\u878d\u8cc7\u8b8a</th><th>\u878d\u5238\u8b8a</th><th>\u6cd5\u4eba\u6bd4</th><th>\u80a1\u50f9</th><th>MA20</th><th>\u8a55\u5206</th></tr></thead>
+<table><thead><tr><th>\u4ee3\u865f</th><th>\u540d\u7a31</th><th>\u5206\u6578</th><th>\u5927\u6236%</th><th>\u5927\u6236\u8b8a\u5316</th><th>\u878d\u8cc7\u8b8a</th><th>\u878d\u5238\u8b8a</th><th>\u6cd5\u4eba\u6bd4</th><th>\u80a1\u50f9</th><th>MA20</th></tr></thead>
 <tbody>{s3r}</tbody></table></div>
 
 <div class="sec sell"><h2>&#x26A0;&#xFE0F; \u8ce3\u51fa\u8b66\u793a</h2>
