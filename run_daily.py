@@ -918,14 +918,14 @@ def format_line_message(s1, s2, s3, sell):
 
     lines.append("\n=== \u7b56\u7565\u4e8c\uff1a\u7c4c\u78bc\u52d5\u80fd ===")
     for c in s2:
-        lines.append(f"[{c['tier']}] {c['stock_id']} {c.get('name','?')} "
+        lines.append(f"{c['stock_id']} {c.get('name','?')} "
                      f"s={c.get('total_score',0)} "
                      f"TVR={c.get('tvr',0):.1f}% "
                      f"buy={c.get('buy_days',0)}/10d")
 
     lines.append("\n=== \u7b56\u7565\u4e09\uff1a\u7c4c\u78bc\u96c6\u4e2d ===")
     for c in s3:
-        lines.append(f"[{c['tier']}] {c['stock_id']} {c.get('name','?')} "
+        lines.append(f"{c['stock_id']} {c.get('name','?')} "
                      f"s={c.get('total_score',0)} "
                      f"\u5927\u6236={c.get('big_holder_pct',0):.1f}%"
                      f"({c.get('big_holder_chg',0):+.1f})")
