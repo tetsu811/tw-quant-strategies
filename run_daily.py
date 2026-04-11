@@ -173,8 +173,8 @@ def run_strategy_1(name_map):
     top.sort(key=lambda x: x["total_score"], reverse=True)
 
     result = []
-    for i, c in enumerate(top[:15]):
-        c["tier"] = "Top" if i < 5 else ("Second" if i < 10 else "Third")
+    for c in top[:5]:
+        result.append(c)
         result.append(c)
     print(f"  [S1] {len(result)} picks")
     return result
@@ -774,7 +774,7 @@ def generate_html(s1, s2, s3, sell):
     # S1 rows
     s1r = ""
     for c in s1:
-        s1r += (f'<tr><td>{tb(c.get("tier",""))}</td>'
+        s1r += (f'<tr>'
                 f'<td><b>{c["stock_id"]}</b></td>'
                 f'<td>{c.get("name","?")}</td>'
                 f'<td class="num">{c.get("total_score",0)}</td>'
@@ -842,7 +842,7 @@ def generate_html(s1, s2, s3, sell):
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:#0a0a0f;color:#d0d0d0;padding:20px;max-width:1200px;margin:0 auto}}
-h1{{text-align:center;font-size:22px;color:#fff;margin-bottom:4px;padding-top:10px}}
+h1{{text-align:center;font-size:22px;color:#fff;margin-bottom:4px;padding-top:80px}}
 .sub{{text-align:center;color:#666;font-size:13px;margin-bottom:24px}}
 .sec{{border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto}}
 .s1,.s2,.s3{{background:#111828;border:1px solid #1e2d4a}}
@@ -912,7 +912,7 @@ def format_line_message(s1, s2, s3, sell):
 
     lines.append("=== \u7b56\u7565\u4e00\uff1a\u71df\u6536\u52d5\u80fd ===")
     for c in s1:
-        lines.append(f"[{c['tier']}] {c['stock_id']} {c.get('name','?')} "
+        lines.append(f"{c['stock_id']} {c.get('name','?')} "
                      f"s={c['total_score']} "
                      f"YoY={'/'.join(f'{y:.0f}%' for y in c.get('yoys',[]))}")
 
