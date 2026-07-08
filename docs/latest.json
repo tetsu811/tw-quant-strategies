@@ -1,63 +1,6 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "strategy_1": [
-    {
-      "stock_id": "2425",
-      "yoys": [
-        26.6,
-        43.9,
-        113.5
-      ],
-      "pos_count": 3,
-      "latest_rev": 1001646000.0,
-      "accel": 69.6,
-      "rev_score": 13,
-      "price": 39.9,
-      "price_chg": 58.3,
-      "above_ma20": true,
-      "above_ma60": true,
-      "ma_bonus": 6,
-      "total_score": 19,
-      "name": "承啟"
-    },
-    {
-      "stock_id": "3231",
-      "yoys": [
-        141.6,
-        151.5,
-        177.4
-      ],
-      "pos_count": 3,
-      "latest_rev": 284893080000.0,
-      "accel": 25.900000000000006,
-      "rev_score": 14,
-      "price": 155.5,
-      "price_chg": 22.0,
-      "above_ma20": false,
-      "above_ma60": true,
-      "ma_bonus": 4,
-      "total_score": 18,
-      "name": "緯創"
-    },
-    {
-      "stock_id": "8112",
-      "yoys": [
-        32.3,
-        72.5,
-        136.8
-      ],
-      "pos_count": 3,
-      "latest_rev": 31218239000.0,
-      "accel": 64.30000000000001,
-      "rev_score": 14,
-      "price": 90.2,
-      "price_chg": 26.2,
-      "above_ma20": false,
-      "above_ma60": true,
-      "ma_bonus": 4,
-      "total_score": 18,
-      "name": "至上"
-    },
     {
       "stock_id": "2345",
       "yoys": [
@@ -69,13 +12,32 @@
       "latest_rev": 26052581000.0,
       "accel": 10.799999999999997,
       "rev_score": 13,
-      "price": 2455.0,
-      "price_chg": 77.9,
+      "price": 2415.0,
+      "price_chg": 68.3,
       "above_ma20": false,
       "above_ma60": true,
       "ma_bonus": 4,
       "total_score": 17,
       "name": "智邦"
+    },
+    {
+      "stock_id": "2425",
+      "yoys": [
+        26.6,
+        43.9,
+        113.5
+      ],
+      "pos_count": 3,
+      "latest_rev": 1001646000.0,
+      "accel": 69.6,
+      "rev_score": 13,
+      "price": 39.65,
+      "price_chg": 54.3,
+      "above_ma20": false,
+      "above_ma60": true,
+      "ma_bonus": 4,
+      "total_score": 17,
+      "name": "承啟"
     },
     {
       "stock_id": "1256",
@@ -88,124 +50,136 @@
       "latest_rev": 448137000.0,
       "accel": 51.3,
       "rev_score": 11,
-      "price": 200.0,
-      "price_chg": 24.2,
+      "price": 199.5,
+      "price_chg": 21.6,
       "above_ma20": true,
       "above_ma60": true,
       "ma_bonus": 6,
       "total_score": 17,
       "name": "鮮活果汁-KY"
+    },
+    {
+      "stock_id": "2363",
+      "yoys": [
+        159.5,
+        171.6,
+        210.9
+      ],
+      "pos_count": 3,
+      "latest_rev": 424573000.0,
+      "accel": 39.30000000000001,
+      "rev_score": 11,
+      "price": 67.0,
+      "price_chg": 34.8,
+      "above_ma20": true,
+      "above_ma60": true,
+      "ma_bonus": 6,
+      "total_score": 17,
+      "name": "矽統"
+    },
+    {
+      "stock_id": "2887",
+      "yoys": [
+        229.5,
+        117.7,
+        90.9
+      ],
+      "pos_count": 3,
+      "latest_rev": 22266461000.0,
+      "accel": -26.799999999999997,
+      "rev_score": 11,
+      "price": 35.85,
+      "price_chg": 47.5,
+      "above_ma20": true,
+      "above_ma60": true,
+      "ma_bonus": 6,
+      "total_score": 17,
+      "name": "台新新光金"
     }
   ],
   "strategy_2": [
     {
-      "stock_id": "3227",
-      "name": "原相",
-      "total_score": 18,
-      "score_detail": "A10+B4+D4",
-      "tvr": 11187.4,
-      "buy_days": 10,
-      "consec": 10,
-      "conc_20": 6534.5,
-      "foreign_5d": 1271979.0,
-      "trust_5d": 3391592.0,
-      "price": 232.0,
+      "stock_id": "4961",
+      "name": "天鈺",
+      "total_score": 16,
+      "score_detail": "A9+B4+D3",
+      "tvr": 8865.2,
+      "buy_days": 9,
+      "consec": 1,
+      "conc_20": 2990.4,
+      "foreign_5d": 1268297.0,
+      "trust_5d": 409000.0,
+      "price": 175.0,
       "above_ma20": true,
       "above_ma60": true,
-      "vol_ratio": 1.84
+      "vol_ratio": 1.16
+    },
+    {
+      "stock_id": "006201",
+      "name": "元大富櫃50",
+      "total_score": 16,
+      "score_detail": "A10+B3+D3",
+      "tvr": 10919.7,
+      "buy_days": 7,
+      "consec": 3,
+      "conc_20": 4643.4,
+      "foreign_5d": 55000.0,
+      "trust_5d": 148000.0,
+      "price": 46.34,
+      "above_ma20": false,
+      "above_ma60": false,
+      "vol_ratio": 1.15
+    },
+    {
+      "stock_id": "6831",
+      "name": "邁科",
+      "total_score": 16,
+      "score_detail": "A10+B3+D3",
+      "tvr": 5049.0,
+      "buy_days": 9,
+      "consec": 4,
+      "conc_20": 4646.3,
+      "foreign_5d": 729139.0,
+      "trust_5d": 106000.0,
+      "price": 819.0,
+      "above_ma20": true,
+      "above_ma60": true,
+      "vol_ratio": 1.08
     },
     {
       "stock_id": "2206",
       "name": "三陽工業",
-      "total_score": 16,
-      "score_detail": "A10+B3+D3",
-      "tvr": 21312.6,
-      "buy_days": 8,
-      "consec": 4,
-      "conc_20": 6501.4,
-      "foreign_5d": 2461359.0,
-      "trust_5d": 190013.0,
-      "price": 63.8,
-      "above_ma20": true,
-      "above_ma60": true,
-      "vol_ratio": 1.02
-    },
-    {
-      "stock_id": "6548",
-      "name": "長科*",
-      "total_score": 16,
-      "score_detail": "A10+B3+D3",
-      "tvr": 5950.1,
-      "buy_days": 10,
-      "consec": 10,
-      "conc_20": 280.9,
-      "foreign_5d": 115881.0,
-      "trust_5d": 4794000.0,
-      "price": 89.3,
-      "above_ma20": true,
-      "above_ma60": true,
-      "vol_ratio": 1.35
-    },
-    {
-      "stock_id": "2395",
-      "name": "研華",
-      "total_score": 16,
-      "score_detail": "A10+B4+D2",
-      "tvr": 3342.5,
-      "buy_days": 8,
-      "consec": 4,
-      "conc_20": 619.4,
-      "foreign_5d": 1665029.0,
-      "trust_5d": 143118.0,
-      "price": 496.5,
-      "above_ma20": true,
-      "above_ma60": true,
-      "vol_ratio": 0.76
-    },
-    {
-      "stock_id": "6191",
-      "name": "精成科",
       "total_score": 15,
-      "score_detail": "A10+B2+D3",
-      "tvr": 19237.7,
+      "score_detail": "A10+B3+D2",
+      "tvr": 27387.6,
       "buy_days": 8,
-      "consec": 8,
-      "conc_20": 7364.1,
-      "foreign_5d": -6920041.0,
-      "trust_5d": 13879000.0,
-      "price": 103.5,
+      "consec": 5,
+      "conc_20": 7655.9,
+      "foreign_5d": 2698735.0,
+      "trust_5d": 655000.0,
+      "price": 64.0,
       "above_ma20": true,
       "above_ma60": true,
-      "vol_ratio": 1.21
+      "vol_ratio": 0.99
+    },
+    {
+      "stock_id": "6488",
+      "name": "環球晶",
+      "total_score": 15,
+      "score_detail": "A8+B3+D4",
+      "tvr": 8187.1,
+      "buy_days": 4,
+      "consec": 3,
+      "conc_20": 2071.4,
+      "foreign_5d": 3622737.0,
+      "trust_5d": 1824495.0,
+      "price": 1230.0,
+      "above_ma20": true,
+      "above_ma60": true,
+      "vol_ratio": 1.63
     }
   ],
   "strategy_3": [
-    {
-      "stock_id": "3046",
-      "name": "建碁",
-      "total_score": 8,
-      "score_detail": "A0+B2+C3+D3",
-      "big_holder_pct": 6.4,
-      "big_holder_chg": 0.0,
-      "margin_chg": -16,
-      "short_chg": -5,
-      "inst_ratio": 13685.8,
-      "price": 58.4,
-      "above_ma20": true
-    },
-    {
-      "stock_id": "6579",
-      "name": "研揚",
-      "total_score": 8,
-      "score_detail": "A0+B2+C3+D3",
-      "big_holder_pct": 1.4,
-      "big_holder_chg": 0.01,
-      "margin_chg": -25,
-      "short_chg": -1,
-      "inst_ratio": 18131.0,
-      "price": 179.0,
-      "above_ma20": true
-    },
     {
       "stock_id": "2601",
       "name": "益航",
@@ -213,101 +187,95 @@
       "score_detail": "A0+B2+C3+D3",
       "big_holder_pct": 5.7,
       "big_holder_chg": 0.05,
-      "margin_chg": -39,
+      "margin_chg": -116,
       "short_chg": 0,
-      "inst_ratio": 1075.7,
-      "price": 6.87,
+      "inst_ratio": 4957.6,
+      "price": 7.55,
       "above_ma20": true
     },
     {
-      "stock_id": "1466",
-      "name": "聚隆",
-      "total_score": 8,
-      "score_detail": "A2+B3+C0+D3",
-      "big_holder_pct": 8.2,
-      "big_holder_chg": 0.73,
-      "margin_chg": -837,
-      "short_chg": 11,
+      "stock_id": "9949",
+      "name": "琉園",
+      "total_score": 6,
+      "score_detail": "A0+B0+C3+D3",
+      "big_holder_pct": 16.2,
+      "big_holder_chg": 0.05,
+      "margin_chg": 17,
+      "short_chg": 0,
+      "inst_ratio": 838.9,
+      "price": 28.8,
+      "above_ma20": true
+    },
+    {
+      "stock_id": "3564",
+      "name": "其陽",
+      "total_score": 6,
+      "score_detail": "A0+B0+C3+D3",
+      "big_holder_pct": 0.0,
+      "big_holder_chg": 0.0,
+      "margin_chg": 18,
+      "short_chg": 0,
+      "inst_ratio": 8439.8,
+      "price": 56.1,
+      "above_ma20": true
+    },
+    {
+      "stock_id": "6416",
+      "name": "瑞祺電通",
+      "total_score": 5,
+      "score_detail": "A0+B2+C0+D3",
+      "big_holder_pct": 10.9,
+      "big_holder_chg": -0.09,
+      "margin_chg": 0,
+      "short_chg": 176,
       "inst_ratio": 0,
-      "price": 19.4,
+      "price": 97.2,
       "above_ma20": true
     },
     {
-      "stock_id": "3511",
-      "name": "矽瑪",
-      "total_score": 7,
-      "score_detail": "A0+B1+C3+D3",
-      "big_holder_pct": 3.1,
-      "big_holder_chg": -0.54,
-      "margin_chg": 392,
-      "short_chg": 9,
-      "inst_ratio": 980.6,
-      "price": 28.15,
+      "stock_id": "8298",
+      "name": "威睿",
+      "total_score": 5,
+      "score_detail": "A0+B0+C3+D2",
+      "big_holder_pct": 0.0,
+      "big_holder_chg": 0.0,
+      "margin_chg": 0,
+      "short_chg": 0,
+      "inst_ratio": 1686.4,
+      "price": 53.0,
       "above_ma20": true
     }
   ],
   "sell_signals": [
     {
-      "stock_id": "2344",
-      "name": "華邦電",
-      "consecutive_days": 3,
-      "total_net": -25013396.0,
-      "daily_nets": {
-        "2026-07-03": -18105522.0,
-        "2026-07-06": -1416374.0,
-        "2026-07-07": -5491500.0
-      },
-      "price": 174.0,
-      "ma20": 191.38,
-      "ma60": 143.35,
-      "below_ma20": true,
-      "below_ma60": false
-    },
-    {
       "stock_id": "2353",
       "name": "宏碁",
       "consecutive_days": 3,
-      "total_net": -23985781.0,
+      "total_net": -15106997.0,
       "daily_nets": {
-        "2026-07-03": -9399608.0,
         "2026-07-06": -8834000.0,
-        "2026-07-07": -5752173.0
+        "2026-07-07": -5752173.0,
+        "2026-07-08": -520824.0
       },
-      "price": 32.0,
-      "ma20": 34.39,
-      "ma60": 31.64,
+      "price": 32.3,
+      "ma20": 34.16,
+      "ma60": 31.73,
       "below_ma20": true,
       "below_ma60": false
     },
     {
-      "stock_id": "2324",
-      "name": "仁寶",
+      "stock_id": "2344",
+      "name": "華邦電",
       "consecutive_days": 3,
-      "total_net": -22195158.0,
+      "total_net": -10486964.0,
       "daily_nets": {
-        "2026-07-03": -8718676.0,
-        "2026-07-06": -8753000.0,
-        "2026-07-07": -4723482.0
+        "2026-07-06": -1416374.0,
+        "2026-07-07": -5491500.0,
+        "2026-07-08": -3579090.0
       },
-      "price": 35.3,
-      "ma20": 36.34,
-      "ma60": 33.64,
-      "below_ma20": true,
-      "below_ma60": false
-    },
-    {
-      "stock_id": "2884",
-      "name": "玉山金",
-      "consecutive_days": 3,
-      "total_net": -10442480.0,
-      "daily_nets": {
-        "2026-07-03": -3321305.0,
-        "2026-07-06": -3750635.0,
-        "2026-07-07": -3370540.0
-      },
-      "price": 34.5,
-      "ma20": 34.58,
-      "ma60": 32.95,
+      "price": 168.5,
+      "ma20": 191.97,
+      "ma60": 144.59,
       "below_ma20": true,
       "below_ma60": false
     },
@@ -315,15 +283,15 @@
       "stock_id": "6005",
       "name": "群益證",
       "consecutive_days": 3,
-      "total_net": -9952507.0,
+      "total_net": -7017318.0,
       "daily_nets": {
-        "2026-07-03": -3553189.0,
         "2026-07-06": -3261192.0,
-        "2026-07-07": -3138126.0
+        "2026-07-07": -3138126.0,
+        "2026-07-08": -618000.0
       },
-      "price": 38.05,
-      "ma20": 38.76,
-      "ma60": 34.36,
+      "price": 36.25,
+      "ma20": 38.54,
+      "ma60": 34.49,
       "below_ma20": true,
       "below_ma60": false
     },
@@ -331,95 +299,15 @@
       "stock_id": "4938",
       "name": "和碩",
       "consecutive_days": 3,
-      "total_net": -7943239.0,
+      "total_net": -4836143.0,
       "daily_nets": {
-        "2026-07-03": -3319096.0,
         "2026-07-06": -3177094.0,
-        "2026-07-07": -1447049.0
+        "2026-07-07": -1447049.0,
+        "2026-07-08": -212000.0
       },
-      "price": 82.3,
-      "ma20": 85.32,
-      "ma60": 84.17,
-      "below_ma20": true,
-      "below_ma60": true
-    },
-    {
-      "stock_id": "2882",
-      "name": "國泰金",
-      "consecutive_days": 3,
-      "total_net": -7798616.0,
-      "daily_nets": {
-        "2026-07-03": -1761384.0,
-        "2026-07-06": -2760925.0,
-        "2026-07-07": -3276307.0
-      },
-      "price": 97.0,
-      "ma20": 103.68,
-      "ma60": 87.82,
-      "below_ma20": true,
-      "below_ma60": false
-    },
-    {
-      "stock_id": "6239",
-      "name": "力成",
-      "consecutive_days": 3,
-      "total_net": -6119960.0,
-      "daily_nets": {
-        "2026-07-03": -2520960.0,
-        "2026-07-06": -1630000.0,
-        "2026-07-07": -1969000.0
-      },
-      "price": 323.5,
-      "ma20": 334.9,
-      "ma60": 283.35,
-      "below_ma20": true,
-      "below_ma60": false
-    },
-    {
-      "stock_id": "3036",
-      "name": "文曄",
-      "consecutive_days": 3,
-      "total_net": -6107285.0,
-      "daily_nets": {
-        "2026-07-03": -2414034.0,
-        "2026-07-06": -2449000.0,
-        "2026-07-07": -1244251.0
-      },
-      "price": 214.0,
-      "ma20": 222.28,
-      "ma60": 241.04,
-      "below_ma20": true,
-      "below_ma60": true
-    },
-    {
-      "stock_id": "2881",
-      "name": "富邦金",
-      "consecutive_days": 3,
-      "total_net": -5943611.0,
-      "daily_nets": {
-        "2026-07-03": -1945659.0,
-        "2026-07-06": -1848774.0,
-        "2026-07-07": -2149178.0
-      },
-      "price": 123.0,
-      "ma20": 128.7,
-      "ma60": 107.44,
-      "below_ma20": true,
-      "below_ma60": false
-    },
-    {
-      "stock_id": "2504",
-      "name": "國產",
-      "consecutive_days": 3,
-      "total_net": -4144000.0,
-      "daily_nets": {
-        "2026-07-03": -1456000.0,
-        "2026-07-06": -1295000.0,
-        "2026-07-07": -1393000.0
-      },
-      "price": 32.15,
-      "ma20": 34.06,
-      "ma60": 34.87,
+      "price": 83.8,
+      "ma20": 84.75,
+      "ma60": 84.26,
       "below_ma20": true,
       "below_ma60": true
     },
@@ -427,15 +315,15 @@
       "stock_id": "4958",
       "name": "臻鼎-KY",
       "consecutive_days": 3,
-      "total_net": -4126964.0,
+      "total_net": -3400929.0,
       "daily_nets": {
-        "2026-07-03": -1021846.0,
         "2026-07-06": -1823106.0,
-        "2026-07-07": -1282012.0
+        "2026-07-07": -1282012.0,
+        "2026-07-08": -295811.0
       },
-      "price": 548.0,
-      "ma20": 587.25,
-      "ma60": 472.02,
+      "price": 565.0,
+      "ma20": 588.25,
+      "ma60": 477.14,
       "below_ma20": true,
       "below_ma60": false
     },
@@ -443,127 +331,207 @@
       "stock_id": "6176",
       "name": "瑞儀",
       "consecutive_days": 3,
-      "total_net": -3416000.0,
+      "total_net": -2502000.0,
       "daily_nets": {
-        "2026-07-03": -996000.0,
         "2026-07-06": -1238000.0,
-        "2026-07-07": -1182000.0
+        "2026-07-07": -1182000.0,
+        "2026-07-08": -82000.0
       },
-      "price": 91.2,
-      "ma20": 89.33,
-      "ma60": 96.73,
+      "price": 90.9,
+      "ma20": 89.29,
+      "ma60": 96.74,
       "below_ma20": false,
       "below_ma60": true
     },
     {
-      "stock_id": "2385",
-      "name": "群光",
+      "stock_id": "6805",
+      "name": "富世達",
       "consecutive_days": 3,
-      "total_net": -3395323.0,
+      "total_net": -1442500.0,
       "daily_nets": {
-        "2026-07-03": -1835146.0,
-        "2026-07-06": -1001555.0,
-        "2026-07-07": -558622.0
+        "2026-07-06": -237000.0,
+        "2026-07-07": -338000.0,
+        "2026-07-08": -867500.0
       },
-      "price": 107.0,
-      "ma20": 115.25,
-      "ma60": 125.17,
+      "price": 1395.0,
+      "ma20": 1690.0,
+      "ma60": 1836.5,
       "below_ma20": true,
       "below_ma60": true
     },
     {
-      "stock_id": "2301",
-      "name": "光寶科",
+      "stock_id": "2404",
+      "name": "漢唐",
       "consecutive_days": 3,
-      "total_net": -2610997.0,
+      "total_net": -1130700.0,
       "daily_nets": {
-        "2026-07-03": -869829.0,
-        "2026-07-06": -880707.0,
-        "2026-07-07": -860461.0
+        "2026-07-06": -471000.0,
+        "2026-07-07": -351000.0,
+        "2026-07-08": -308700.0
       },
-      "price": 213.0,
-      "ma20": 215.85,
-      "ma60": 204.53,
+      "price": 1200.0,
+      "ma20": 1291.0,
+      "ma60": 1134.58,
       "below_ma20": true,
       "below_ma60": false
     },
     {
-      "stock_id": "5871",
-      "name": "中租-KY",
+      "stock_id": "2360",
+      "name": "致茂",
       "consecutive_days": 3,
-      "total_net": -2518950.0,
+      "total_net": -1071797.0,
       "daily_nets": {
-        "2026-07-03": -822750.0,
-        "2026-07-06": -862903.0,
-        "2026-07-07": -833297.0
+        "2026-07-06": -216568.0,
+        "2026-07-07": -437843.0,
+        "2026-07-08": -417386.0
       },
-      "price": 114.0,
-      "ma20": 116.58,
-      "ma60": 114.58,
+      "price": 1855.0,
+      "ma20": 2188.25,
+      "ma60": 2238.33,
       "below_ma20": true,
       "below_ma60": true
     },
     {
-      "stock_id": "2357",
-      "name": "華碩",
+      "stock_id": "8028",
+      "name": "昇陽半導體",
       "consecutive_days": 3,
-      "total_net": -2049585.0,
+      "total_net": -909100.0,
       "daily_nets": {
-        "2026-07-03": -729885.0,
-        "2026-07-06": -526762.0,
-        "2026-07-07": -792938.0
+        "2026-07-06": -455000.0,
+        "2026-07-07": -285000.0,
+        "2026-07-08": -169100.0
       },
-      "price": 663.0,
-      "ma20": 746.4,
-      "ma60": 696.35,
+      "price": 305.5,
+      "ma20": 311.85,
+      "ma60": 279.31,
       "below_ma20": true,
-      "below_ma60": true
-    },
-    {
-      "stock_id": "6188",
-      "name": "廣明",
-      "consecutive_days": 3,
-      "total_net": -1965000.0,
-      "daily_nets": {
-        "2026-07-03": -938000.0,
-        "2026-07-06": -954000.0,
-        "2026-07-07": -73000.0
-      },
-      "price": 78.5,
-      "ma20": 78.74,
-      "ma60": 82.83,
-      "below_ma20": true,
-      "below_ma60": true
-    },
-    {
-      "stock_id": "6147",
-      "name": "頎邦",
-      "consecutive_days": 3,
-      "total_net": -1666959.0,
-      "daily_nets": {
-        "2026-07-03": -770959.0,
-        "2026-07-06": -461000.0,
-        "2026-07-07": -435000.0
-      },
-      "price": 200.0,
-      "ma20": 229.68,
-      "ma60": 206.15,
-      "below_ma20": true,
-      "below_ma60": true
+      "below_ma60": false
     },
     {
       "stock_id": "9907",
       "name": "統一實",
       "consecutive_days": 3,
-      "total_net": -1119245.0,
+      "total_net": -862546.0,
       "daily_nets": {
-        "2026-07-03": -506699.0,
         "2026-07-06": -323693.0,
-        "2026-07-07": -288853.0
+        "2026-07-07": -288853.0,
+        "2026-07-08": -250000.0
       },
-      "price": 15.4,
-      "ma20": 15.84,
-      "ma60": 16.59,
+      "price": 15.3,
+      "ma20": 15.78,
+      "ma60": 16.54,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "2331",
+      "name": "精英",
+      "consecutive_days": 3,
+      "total_net": -450000.0,
+      "daily_nets": {
+        "2026-07-06": -200000.0,
+        "2026-07-07": -150000.0,
+        "2026-07-08": -100000.0
+      },
+      "price": 20.5,
+      "ma20": 21.35,
+      "ma60": 21.25,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "2492",
+      "name": "華新科",
+      "consecutive_days": 3,
+      "total_net": -315800.0,
+      "daily_nets": {
+        "2026-07-06": -110000.0,
+        "2026-07-07": -92800.0,
+        "2026-07-08": -113000.0
+      },
+      "price": 474.0,
+      "ma20": 527.12,
+      "ma60": 334.6,
+      "below_ma20": true,
+      "below_ma60": false
+    },
+    {
+      "stock_id": "4979",
+      "name": "華星光",
+      "consecutive_days": 3,
+      "total_net": -306000.0,
+      "daily_nets": {
+        "2026-07-06": -127000.0,
+        "2026-07-07": -117000.0,
+        "2026-07-08": -62000.0
+      },
+      "price": 434.5,
+      "ma20": 491.73,
+      "ma60": 571.21,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "3131",
+      "name": "弘塑",
+      "consecutive_days": 3,
+      "total_net": -289654.0,
+      "daily_nets": {
+        "2026-07-06": -19754.0,
+        "2026-07-07": -103900.0,
+        "2026-07-08": -166000.0
+      },
+      "price": 3110.0,
+      "ma20": 3425.5,
+      "ma60": 3198.0,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "6510",
+      "name": "精測",
+      "consecutive_days": 3,
+      "total_net": -218434.0,
+      "daily_nets": {
+        "2026-07-06": -51661.0,
+        "2026-07-07": -118800.0,
+        "2026-07-08": -47973.0
+      },
+      "price": 2840.0,
+      "ma20": 3321.75,
+      "ma60": 3499.67,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "5515",
+      "name": "建國",
+      "consecutive_days": 3,
+      "total_net": -130000.0,
+      "daily_nets": {
+        "2026-07-06": -40000.0,
+        "2026-07-07": -40000.0,
+        "2026-07-08": -50000.0
+      },
+      "price": 40.6,
+      "ma20": 41.66,
+      "ma60": 40.91,
+      "below_ma20": true,
+      "below_ma60": true
+    },
+    {
+      "stock_id": "5274",
+      "name": "信驊",
+      "consecutive_days": 3,
+      "total_net": -129949.0,
+      "daily_nets": {
+        "2026-07-06": -83572.0,
+        "2026-07-07": -25400.0,
+        "2026-07-08": -20977.0
+      },
+      "price": 13975.0,
+      "ma20": 17198.25,
+      "ma60": 16952.42,
       "below_ma20": true,
       "below_ma60": true
     }
